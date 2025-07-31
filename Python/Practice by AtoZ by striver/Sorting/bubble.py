@@ -6,10 +6,8 @@ def swap(n, j):
     arr[j] = temp
 
 for i in range(len(arr)):
-    mini = i
-    for j in range(i, len(arr)):
-        if arr[j] < arr[mini]:
-            mini = j
-    swap(i, mini)
+    for j in range(len(arr)-i-1):
+        if arr[j]>arr[j+1]:
+            swap(j,j+1)
 
 print(arr)
